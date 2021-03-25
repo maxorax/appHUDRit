@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="flr-Aa-wBx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="4eA-PD-2AZ">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="flr-Aa-wBx" customClass="ViewController" customModule="appHUDRit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cKJ-7g-pnu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQb-C1-zWR" customClass="SpeedView" customModule="appHUDRit" customModuleProvider="target">
+                                <rect key="frame" x="12" y="292" width="390" height="312"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fQb-C1-zWR" secondAttribute="height" multiplier="5:4" id="RNN-Eb-ro0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="speed">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28j-Fa-Zim" customClass="HeaderView" customModule="appHUDRit" customModuleProvider="target">
+                                <rect key="frame" x="12" y="44" width="242" height="52"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="28j-Fa-Zim" secondAttribute="height" multiplier="65:14" id="bmY-XS-a6E"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rc-DJ-u2G" customClass="FooterView" customModule="appHUDRit" customModuleProvider="target">
+                                <rect key="frame" x="12" y="772.5" width="390" height="89.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4rc-DJ-u2G" secondAttribute="height" multiplier="187:43" id="FKo-EJ-IZm"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SO-t1-2ip">
+                                <rect key="frame" x="326" y="47" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8SO-t1-2ip" secondAttribute="height" multiplier="38:15" id="CEo-ef-FRE"/>
+                                </constraints>
+                                <state key="normal" title="настройки"/>
+                                <connections>
+                                    <segue destination="iKV-2R-Ddz" kind="show" id="LUR-oP-JTD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 км/ч" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbX-lH-UeR">
+                                <rect key="frame" x="12" y="604" width="390" height="88"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FxV-Dv-bWq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4rc-DJ-u2G" firstAttribute="bottom" secondItem="FxV-Dv-bWq" secondAttribute="bottom" id="11g-Rg-SjH"/>
+                            <constraint firstItem="4rc-DJ-u2G" firstAttribute="leading" secondItem="FxV-Dv-bWq" secondAttribute="leading" constant="12" id="1Kz-AX-tj4"/>
+                            <constraint firstItem="bbX-lH-UeR" firstAttribute="top" secondItem="fQb-C1-zWR" secondAttribute="bottom" id="42d-gl-GUl"/>
+                            <constraint firstItem="fQb-C1-zWR" firstAttribute="centerY" secondItem="cKJ-7g-pnu" secondAttribute="centerY" id="9Rj-xz-FCt"/>
+                            <constraint firstItem="FxV-Dv-bWq" firstAttribute="trailing" secondItem="fQb-C1-zWR" secondAttribute="trailing" constant="12" id="BSq-mp-7Zx"/>
+                            <constraint firstItem="FxV-Dv-bWq" firstAttribute="trailing" secondItem="bbX-lH-UeR" secondAttribute="trailing" constant="12" id="Hzn-0u-yha"/>
+                            <constraint firstItem="bbX-lH-UeR" firstAttribute="top" secondItem="fQb-C1-zWR" secondAttribute="bottom" id="K0h-UE-IdL"/>
+                            <constraint firstItem="fQb-C1-zWR" firstAttribute="leading" secondItem="FxV-Dv-bWq" secondAttribute="leading" constant="12" id="KL7-XL-8T0"/>
+                            <constraint firstItem="28j-Fa-Zim" firstAttribute="leading" secondItem="FxV-Dv-bWq" secondAttribute="leading" constant="12" id="LP8-pW-CHJ"/>
+                            <constraint firstItem="8SO-t1-2ip" firstAttribute="top" secondItem="FxV-Dv-bWq" secondAttribute="top" constant="3" id="RKI-UA-fiP"/>
+                            <constraint firstItem="FxV-Dv-bWq" firstAttribute="trailing" secondItem="8SO-t1-2ip" secondAttribute="trailing" constant="12" id="S7G-Oz-ne7"/>
+                            <constraint firstItem="8SO-t1-2ip" firstAttribute="leading" secondItem="28j-Fa-Zim" secondAttribute="trailing" constant="72" id="VL9-MQ-mQj"/>
+                            <constraint firstItem="FxV-Dv-bWq" firstAttribute="trailing" secondItem="4rc-DJ-u2G" secondAttribute="trailing" constant="12" id="hLw-Bx-f91"/>
+                            <constraint firstItem="4rc-DJ-u2G" firstAttribute="top" secondItem="bbX-lH-UeR" secondAttribute="bottom" constant="80.5" id="okQ-wg-Jdq"/>
+                            <constraint firstItem="bbX-lH-UeR" firstAttribute="leading" secondItem="FxV-Dv-bWq" secondAttribute="leading" constant="12" id="u4m-UJ-TgY"/>
+                            <constraint firstItem="28j-Fa-Zim" firstAttribute="top" secondItem="FxV-Dv-bWq" secondAttribute="top" id="xF6-pI-XFe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="footerView" destination="4rc-DJ-u2G" id="fEB-e4-hBp"/>
+                        <outlet property="headerView" destination="28j-Fa-Zim" id="fHC-IS-ebY"/>
+                        <outlet property="speed" destination="bbX-lH-UeR" id="MkA-dV-Ay3"/>
+                        <outlet property="speedView" destination="fQb-C1-zWR" id="Wvm-lS-TyY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8QG-IE-qb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="76.339285714285708"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="iwk-85-6oE">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="iKV-2R-Ddz" customClass="SettingsViewController" customModule="appHUDRit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gZJ-6g-WeF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hi2-fr-Brt">
+                                <rect key="frame" x="20" y="432.5" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Км"/>
+                                    <segment title="Миль"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5K-5f-ZOJ">
+                                <rect key="frame" x="185" y="492" width="45" height="30"/>
+                                <state key="normal" title="Назад"/>
+                                <connections>
+                                    <segue destination="lqS-DY-zcz" kind="unwind" unwindAction="unwindToSettingsViewController:" id="PhA-M2-yaB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MIz-k7-9s4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hi2-fr-Brt" firstAttribute="centerY" secondItem="gZJ-6g-WeF" secondAttribute="centerY" id="3qd-oV-TY5"/>
+                            <constraint firstItem="MIz-k7-9s4" firstAttribute="trailing" secondItem="Hi2-fr-Brt" secondAttribute="trailing" constant="20" id="81f-Uk-Egs"/>
+                            <constraint firstItem="MIz-k7-9s4" firstAttribute="trailing" secondItem="m5K-5f-ZOJ" secondAttribute="trailing" constant="184" id="AAw-P3-I2A"/>
+                            <constraint firstItem="m5K-5f-ZOJ" firstAttribute="leading" secondItem="MIz-k7-9s4" secondAttribute="leading" constant="185" id="IoL-Lq-ejT"/>
+                            <constraint firstItem="Hi2-fr-Brt" firstAttribute="leading" secondItem="MIz-k7-9s4" secondAttribute="leading" constant="20" id="nye-eV-aUv"/>
+                            <constraint firstItem="m5K-5f-ZOJ" firstAttribute="top" secondItem="Hi2-fr-Brt" secondAttribute="bottom" constant="28.5" id="yCU-dy-fGF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="35O-JX-AIk"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="Hi2-fr-Brt" id="kfk-sR-8LT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yau-Lk-SuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="lqS-DY-zcz" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1802.8985507246377" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="appHUDRit" customModuleProvider="target">
+            <connections>
+                <outlet property="HUDLabel" destination="075-bF-izo" id="xKi-3Y-ot8"/>
+                <outlet property="hudSwitch" destination="caP-2u-zwv" id="eZW-23-egM"/>
+                <outlet property="weather" destination="xuh-bC-Dp5" id="bNX-MV-Jp6"/>
+                <outlet property="weatherLabel" destination="dpz-61-4qc" id="bYC-XG-lTm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="273" height="74"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="погода" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpz-61-4qc">
+                    <rect key="frame" x="3" y="6" width="56" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="dpz-61-4qc" secondAttribute="height" multiplier="8:3" id="wRQ-v0-bG6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HUD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="075-bF-izo">
+                    <rect key="frame" x="227" y="6" width="37" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="075-bF-izo" secondAttribute="height" multiplier="37:21" id="9S1-tn-q2m"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuh-bC-Dp5">
+                    <rect key="frame" x="10" y="32" width="42" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="xuh-bC-Dp5" secondAttribute="height" multiplier="41:20" id="qZq-yS-D9M"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="caP-2u-zwv">
+                    <rect key="frame" x="221" y="33" width="51" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="caP-2u-zwv" secondAttribute="height" multiplier="49:31" id="NMH-Zr-11D"/>
+                    </constraints>
+                </switch>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="xuh-bC-Dp5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="Cgh-Ir-mkj"/>
+                <constraint firstItem="dpz-61-4qc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="MWz-T6-cNg"/>
+                <constraint firstItem="075-bF-izo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="T0m-8k-yVS"/>
+                <constraint firstItem="xuh-bC-Dp5" firstAttribute="top" secondItem="dpz-61-4qc" secondAttribute="bottom" constant="5" id="Whr-Cd-jy3"/>
+                <constraint firstItem="caP-2u-zwv" firstAttribute="top" secondItem="075-bF-izo" secondAttribute="bottom" constant="6" id="dqN-hd-id5"/>
+                <constraint firstAttribute="trailing" secondItem="075-bF-izo" secondAttribute="trailing" constant="9" id="khe-hr-6CY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="caP-2u-zwv" secondAttribute="trailing" constant="3" id="vYC-9b-Xbe"/>
+                <constraint firstItem="dpz-61-4qc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="3" id="yb1-iW-XCo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="23.913043478260871" y="-219.64285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
