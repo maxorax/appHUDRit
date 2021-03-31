@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="flr-Aa-wBx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -36,10 +37,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rc-DJ-u2G" customClass="FooterView" customModule="appHUDRit" customModuleProvider="target">
-                                <rect key="frame" x="12" y="772.5" width="390" height="89.5"/>
+                                <rect key="frame" x="12" y="773" width="390" height="89"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="4rc-DJ-u2G" secondAttribute="height" multiplier="187:43" id="FKo-EJ-IZm"/>
+                                    <constraint firstAttribute="width" secondItem="4rc-DJ-u2G" secondAttribute="height" multiplier="390:89" id="uua-y5-cYf"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SO-t1-2ip">
@@ -54,6 +55,9 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 км/ч" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbX-lH-UeR">
                                 <rect key="frame" x="12" y="604" width="390" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="vgz-eD-gaB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="56"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,7 +79,7 @@
                             <constraint firstItem="FxV-Dv-bWq" firstAttribute="trailing" secondItem="8SO-t1-2ip" secondAttribute="trailing" constant="12" id="S7G-Oz-ne7"/>
                             <constraint firstItem="8SO-t1-2ip" firstAttribute="leading" secondItem="28j-Fa-Zim" secondAttribute="trailing" constant="72" id="VL9-MQ-mQj"/>
                             <constraint firstItem="FxV-Dv-bWq" firstAttribute="trailing" secondItem="4rc-DJ-u2G" secondAttribute="trailing" constant="12" id="hLw-Bx-f91"/>
-                            <constraint firstItem="4rc-DJ-u2G" firstAttribute="top" secondItem="bbX-lH-UeR" secondAttribute="bottom" constant="80.5" id="okQ-wg-Jdq"/>
+                            <constraint firstItem="4rc-DJ-u2G" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bbX-lH-UeR" secondAttribute="bottom" id="okQ-wg-Jdq"/>
                             <constraint firstItem="bbX-lH-UeR" firstAttribute="leading" secondItem="FxV-Dv-bWq" secondAttribute="leading" constant="12" id="u4m-UJ-TgY"/>
                             <constraint firstItem="28j-Fa-Zim" firstAttribute="top" secondItem="FxV-Dv-bWq" secondAttribute="top" id="xF6-pI-XFe"/>
                         </constraints>
@@ -107,7 +111,7 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5K-5f-ZOJ">
-                                <rect key="frame" x="185" y="492" width="45" height="30"/>
+                                <rect key="frame" x="184.5" y="492" width="45" height="30"/>
                                 <state key="normal" title="Назад"/>
                                 <connections>
                                     <segue destination="lqS-DY-zcz" kind="unwind" unwindAction="unwindToSettingsViewController:" id="PhA-M2-yaB"/>
@@ -119,8 +123,7 @@
                         <constraints>
                             <constraint firstItem="Hi2-fr-Brt" firstAttribute="centerY" secondItem="gZJ-6g-WeF" secondAttribute="centerY" id="3qd-oV-TY5"/>
                             <constraint firstItem="MIz-k7-9s4" firstAttribute="trailing" secondItem="Hi2-fr-Brt" secondAttribute="trailing" constant="20" id="81f-Uk-Egs"/>
-                            <constraint firstItem="MIz-k7-9s4" firstAttribute="trailing" secondItem="m5K-5f-ZOJ" secondAttribute="trailing" constant="184" id="AAw-P3-I2A"/>
-                            <constraint firstItem="m5K-5f-ZOJ" firstAttribute="leading" secondItem="MIz-k7-9s4" secondAttribute="leading" constant="185" id="IoL-Lq-ejT"/>
+                            <constraint firstItem="m5K-5f-ZOJ" firstAttribute="centerX" secondItem="gZJ-6g-WeF" secondAttribute="centerX" id="W9x-TS-fkc"/>
                             <constraint firstItem="Hi2-fr-Brt" firstAttribute="leading" secondItem="MIz-k7-9s4" secondAttribute="leading" constant="20" id="nye-eV-aUv"/>
                             <constraint firstItem="m5K-5f-ZOJ" firstAttribute="top" secondItem="Hi2-fr-Brt" secondAttribute="bottom" constant="28.5" id="yCU-dy-fGF"/>
                         </constraints>

@@ -86,12 +86,6 @@ class ViewController: UIViewController{
         
     }
     
-    @objc func showSettings(target: UIButton){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let controller = storyboard.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
-        show(controller, sender: nil)
-    }
-    
     @objc func MyTimer(){
         count += 1
     }
